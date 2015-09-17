@@ -21,11 +21,12 @@
 #include "../lucidity/LucidityDoc.h"
 #include "TransferManagerDlg.h"
 
-
+// Search Parameter measurement - Match Any, Match Close, Match Greater, Match Lesser
 typedef enum {
     ESC_ANY,ESC_ABOUT, ESC_GREATER, ESC_LESSER
 } ESearchContraintParameter;
 
+// Search Criteria encapsulation class
 class CSearchCriteria {
 public:
     CSearchCriteria() {
@@ -91,6 +92,7 @@ public:
     }
 };
 
+// Base column types
 typedef enum {ETA_PRIORITY, ETA_FILE, ETA_WS, ETA_BYTEMOVED,ETA_CREATED,ETA_ID,ETA_MOTIFIED,ETA_REF,ETA_FILEREF,ETA_TOTALSIZE,ETA_SPEED,ETA_TYPE,
 ETA_COMPLETED,ETA_START,ETA_COMP, ETA_SIZE, ETA_ETA, ETA_STATUS, ETA_SENDER,ETA_BYTEREMAINING} ETA_Sort;
 
@@ -126,7 +128,7 @@ public:
 	ETA_Sort eSort;
 };
 
-
+// Data row to perform search against
 class CFileSearchEntry {
 public:
     CFileSearchEntry() {
